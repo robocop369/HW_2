@@ -26,21 +26,29 @@ html, body, header, section, nav, article, ul, li, a {
 	color: #333;
 }
 
-
+nav.navbar {
+    max-width: 960px; /* applying max-width */
+	margin: 0 auto; /* center */
+	border-bottom: #b6b5b5 2px solid;
+    .navbar-collapse {
+        justify-content : center; /* center the elements in the block if there is flex */
+        -webkit-justify-content : center; /* make it works on some navigators */
+    }
+}
 
 html, body {
 	color: #787c7f;
 	font-size: 18px;
 	font-family: Arial, sans-serif;
-	background: #eeeeee;
+	background-color: #787c7f;
 	padding: 0 10px;
 	line-height: 1.65;
-	height: 100%;
+	/* height: 100%; */
 }
-body {
+/* body {
 	display: flex;
 	flex-direction: column;
-}
+} */
 
 
 
@@ -78,23 +86,31 @@ textarea {
 
 h1 {
 	color: #4269b1;
-	font-size: 25px;
+	font-size: 30px;
 	border-bottom: #dddddd 2px solid;
 	font-family: Times, serif;
 	padding-bottom: 10px;
 }
 
-header {
+h2 {
+	color: #4269b1;
+	font-size: 15px;
+	border-bottom: #dddddd 2px solid;
+	font-family: Times, serif;
+	padding-bottom: 10px;
+}
+
+/* header {
 	border-bottom: #b6b5b5 2px solid;
 	background: white;
 	margin: 0 -20px;
 	margin-bottom: 35px;
-}
-	header .base_wrap {
+} */
+	/* header .base_wrap {
 		overflow: hidden;
-	}
+	} */
 
-	.logo {
+	/* .logo {
 		font-family: Times, serif;
 		float: left;
 		background: #4269b1;
@@ -102,9 +118,9 @@ header {
 		text-align: center;
 		font-size: 24px;
 		color: white;
-	}
+	} */
 
-nav {
+/* nav {
 	overflow: hidden;
 }
 	nav ul {
@@ -126,15 +142,16 @@ nav {
 			text-decoration: none;
 		}
 			nav ul li:last-child a {
-				border-right: none;
+				border-right: none; */
 			}
 	.wrap_site {
- 	flex: 1 0 auto;
+	 flex: 1 0 auto;
+	 background: #787c7f;
 } 
 
-section {
+/* section {
 	clear: both;
-}
+} */
 
 .base_wrap {
 	width: 100%;
@@ -156,16 +173,17 @@ section {
 	margin-top: 10px;
 	width: 200px;
 	height: auto;
-}
+	}
 
-.gallery {
+
+ .gallery {
 	overflow: hidden;
-}
+          }
 
 	.gallery-thumb {
-		width: 30%;
-		margin-right: 40px;
-		margin-bottom: 50px;
+		/* width: 30%; */
+		/* margin-right: 40px;
+		margin-bottom: 50px; */
 		float: left;
 		overflow: hidden;
 		position: relative;
@@ -203,3 +221,16 @@ footer {
 	margin: 0 -20px;
 }
 
+@media (max-width:599px){
+	.about-me-img {
+		float: none;
+		border: red solid 2px;
+	}
+
+}
+
+@media (max-width: 868px) and (min-width:768px){
+	.gallery-thumb strong {
+		font-size: 10px;
+	}
+}
